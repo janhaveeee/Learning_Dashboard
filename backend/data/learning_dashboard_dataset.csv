@@ -1,0 +1,101 @@
+user_id,quiz_scores,time_spent,correct_answers,proficiency_level,topics_completed,skill_gap
+U1,75,199,6,Beginner,4,Data Science
+U2,56,238,18,Intermediate,4,"Math, AI"
+U3,70,150,15,Intermediate,8,"Math, AI"
+U4,51,89,11,Expert,3,None
+U5,74,155,19,Beginner,12,Data Science
+U6,88,245,8,Beginner,10,Data Science
+U7,90,264,17,Expert,4,"Python, ML"
+U8,63,45,13,Expert,15,Data Science
+U9,78,218,8,Beginner,10,Data Science
+U10,58,39,19,Expert,12,None
+U11,46,299,6,Expert,1,Data Science
+U12,54,136,11,Beginner,7,"Python, ML"
+U13,95,117,13,Expert,8,"Python, ML"
+U14,58,291,9,Intermediate,13,Data Science
+U15,94,272,13,Intermediate,8,"Python, ML"
+U16,52,160,20,Expert,8,"Math, AI"
+U17,81,263,11,Intermediate,13,"Python, ML"
+U18,68,259,17,Beginner,14,"Math, AI"
+U19,86,253,13,Expert,3,None
+U20,70,81,13,Expert,2,Data Science
+U21,48,198,8,Expert,2,"Math, AI"
+U22,82,163,18,Beginner,7,"Math, AI"
+U23,44,66,11,Intermediate,11,"Python, ML"
+U24,84,131,15,Expert,8,"Python, ML"
+U25,95,230,20,Expert,8,"Math, AI"
+U26,74,297,8,Expert,3,Data Science
+U27,65,47,5,Beginner,5,"Math, AI"
+U28,57,76,19,Intermediate,4,None
+U29,81,65,16,Expert,13,Data Science
+U30,63,61,7,Expert,2,None
+U31,54,242,7,Expert,11,"Python, ML"
+U32,87,31,12,Beginner,13,Data Science
+U33,94,278,19,Intermediate,9,"Python, ML"
+U34,100,119,16,Expert,13,"Python, ML"
+U35,64,203,9,Intermediate,1,None
+U36,85,164,14,Beginner,2,"Math, AI"
+U37,69,69,7,Intermediate,1,"Math, AI"
+U38,42,118,13,Expert,4,Data Science
+U39,93,136,5,Beginner,4,Data Science
+U40,85,220,14,Expert,2,"Python, ML"
+U41,41,78,11,Intermediate,14,"Math, AI"
+U42,85,268,15,Intermediate,2,"Math, AI"
+U43,97,88,15,Expert,11,"Python, ML"
+U44,67,104,12,Expert,13,"Math, AI"
+U45,41,180,6,Expert,6,"Python, ML"
+U46,40,270,8,Expert,5,Data Science
+U47,56,79,13,Beginner,1,None
+U48,52,265,11,Beginner,12,"Math, AI"
+U49,76,132,12,Expert,11,"Math, AI"
+U50,66,194,17,Intermediate,8,"Python, ML"
+U51,95,128,18,Beginner,1,"Python, ML"
+U52,74,111,15,Intermediate,2,Data Science
+U53,90,255,14,Expert,4,Data Science
+U54,67,185,9,Beginner,12,"Math, AI"
+U55,60,85,6,Beginner,11,"Python, ML"
+U56,93,182,10,Beginner,15,Data Science
+U57,41,240,19,Expert,11,Data Science
+U58,91,32,14,Expert,15,"Python, ML"
+U59,74,249,20,Intermediate,8,None
+U60,51,213,14,Beginner,3,"Python, ML"
+U61,85,153,10,Intermediate,2,Data Science
+U62,67,38,17,Intermediate,13,"Python, ML"
+U63,40,294,10,Intermediate,3,"Math, AI"
+U64,53,260,5,Expert,8,"Math, AI"
+U65,54,101,9,Beginner,1,"Python, ML"
+U66,72,231,14,Intermediate,10,Data Science
+U67,58,112,16,Intermediate,2,None
+U68,86,63,10,Intermediate,9,"Python, ML"
+U69,62,297,19,Expert,2,Data Science
+U70,71,283,5,Expert,3,"Python, ML"
+U71,72,130,20,Expert,9,Data Science
+U72,54,176,19,Intermediate,5,"Math, AI"
+U73,74,70,11,Beginner,4,"Math, AI"
+U74,78,137,18,Expert,10,None
+U75,55,194,7,Beginner,12,"Python, ML"
+U76,66,184,18,Intermediate,14,Data Science
+U77,98,212,20,Expert,10,Data Science
+U78,55,82,15,Expert,9,Data Science
+U79,99,94,19,Intermediate,1,"Math, AI"
+U80,62,220,10,Expert,6,Data Science
+U81,92,41,5,Expert,3,Data Science
+U82,96,139,16,Beginner,8,Data Science
+U83,85,258,12,Expert,10,Data Science
+U84,59,168,12,Intermediate,2,"Python, ML"
+U85,95,193,17,Expert,4,"Python, ML"
+U86,90,159,18,Intermediate,11,"Python, ML"
+U87,62,63,17,Intermediate,6,Data Science
+U88,74,144,17,Beginner,4,None
+U89,46,186,14,Expert,15,"Math, AI"
+U90,89,182,16,Expert,15,"Python, ML"
+U91,87,296,16,Beginner,10,None
+U92,81,61,14,Expert,13,Data Science
+U93,61,175,17,Intermediate,5,None
+U94,85,140,8,Intermediate,14,"Python, ML"
+U95,78,290,6,Expert,6,None
+U96,67,105,14,Beginner,13,Data Science
+U97,97,165,19,Expert,13,"Math, AI"
+U98,51,198,10,Beginner,9,Data Science
+U99,47,70,20,Expert,7,"Python, ML"
+U100,94,226,17,Expert,2,"Python, ML"
