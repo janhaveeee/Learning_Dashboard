@@ -1,45 +1,53 @@
 import pandas as pd
+import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-import joblib
-import os
-
-# Define file paths
-data_path = "data/learning_dashboard_dataset.csv"
-model_path = "models/proficiency_model.pkl"
-
-# Check if dataset exists
-if not os.path.exists(data_path):
-    raise FileNotFoundError(f"Dataset not found: {data_path}")
+from sklearn.metrics import accuracy_score
 
 # Load dataset
-df = pd.read_csv(data_path)
+data_path = "data/proficiency_dataset.csv"
 
-# Ensure necessary columns exist
-required_columns = {"proficiency_level", "quiz_scores", "time_spent", "correct_answers", "topics_completed"}
-if not required_columns.issubset(df.columns):
-    raise ValueError(f"Missing required columns: {required_columns - set(df.columns)}")
+try:
+    df = pd.read_csv(data_path)
+    print(f"✅ Dataset loaded successfully! Shape: {df.shape}")
+except FileNotFoundError:
+    raise FileNotFoundError(f"❌ Dataset not found: {data_path}")
 
-# Convert categorical proficiency levels to numerical values
+# Standardize column names (strip spaces)
+df.columns = df.columns.str.strip()
+
+# Ensure "Proficiency_Level" is in the dataset
+if "Proficiency_Level" not in df.columns:
+    raise KeyError("❌ Column 'Proficiency_Level' not found in dataset. Check file!")
+
+# Convert categorical proficiency levels to numerical labels
 proficiency_mapping = {"Beginner": 0, "Intermediate": 1, "Expert": 2}
-df["proficiency_level"] = df["proficiency_level"].map(proficiency_mapping)
-
-# Check for NaN values after mapping
-if df["proficiency_level"].isna().any():
-    raise ValueError("Invalid values found in 'proficiency_level' column. Ensure all values are mapped correctly.")
+df["Proficiency_Level"] = df["Proficiency_Level"].map(proficiency_mapping)
 
 # Select features and target
-X = df[["quiz_scores", "time_spent", "correct_answers", "topics_completed"]]
-y = df["proficiency_level"]
+feature_cols = ["Quiz_Scores", "Time_Spent", "Correct_Answers", "Topics_Completed"]
 
-# Split data
+# Ensure all required features are present
+missing_features = [col for col in feature_cols if col not in df.columns]
+if missing_features:
+    raise KeyError(f"❌ Missing feature columns: {missing_features}")
+
+X = df[feature_cols]
+y = df["Proficiency_Level"]
+
+# Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train model
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+# Train Random Forest model
+model = RandomForestClassifier(n_estimators=200, max_depth=10, random_state=42)  # Improved hyperparameters
 model.fit(X_train, y_train)
 
-# Save model
-os.makedirs("models", exist_ok=True)  # Ensure models directory exists
+# Evaluate accuracy
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print(f"✅ Model Accuracy: {accuracy:.4f}")  # Show 4 decimal places
+
+# Save trained model
+model_path = "models/proficiency_model.pkl"
 joblib.dump(model, model_path)
-print(f"✅ Model trained and saved successfully at {model_path}!")
+print(f"✅ Model saved as '{model_path}'")
