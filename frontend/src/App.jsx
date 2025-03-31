@@ -4,7 +4,7 @@ import "./index.css"
 function App() {
   return (
     <div>
-      <h1>Learning Dashboard</h1>
+      <h1>🤖LearnTrack- AI based Learning Dashboard</h1>
       <PredictionForm />
     </div>
   );
